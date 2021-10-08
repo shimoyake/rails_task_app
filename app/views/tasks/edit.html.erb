@@ -1,0 +1,63 @@
+<h1>スケジュール編集</h1>
+
+<%= form_for(@task) do |f| %>
+  
+  <table>
+    
+    <tr>
+      <th>タイトル</th>
+      <td><%= f.text_field :tittle %></td>
+    </tr>
+    
+    <tr>
+      <th>開始日</th>
+      <td><%= f.date_field :bigin %></td>
+    </tr>
+    
+    <tr>
+      <th>終了日</th>
+      <td><%= f.date_field :finish %></td>
+    </tr>
+    
+    <tr>
+      <th>終日</th>
+      <td><%= f.check_box :allday %>終日の場合はチェックを入れます</td>
+    </tr>
+    
+    <tr>
+      <th>スケジュールメモ</th>
+      <td><%= f.text_area :memo , size: "30x10" %></td>
+    </tr>
+    
+    
+  </table>
+  
+  <div class="link">
+  <ul>
+    <li><%= f.submit "登録する"%></li>
+    
+<% end %>
+
+    <li><%= link_to '戻る', tasks_path %></li>
+  </ul>
+</div>
+
+<!--現在の日にち-->
+<div class="date">
+<span id="view_time"></span>
+
+<script type="text/javascript">
+document.getElementById("view_time").innerHTML = getNow();
+
+function getNow() {
+	var now = new Date();
+	var year = now.getFullYear();
+	var mon = now.getMonth()+1; //１を足すこと
+	var day = now.getDate();
+
+	//出力用
+	var s = year + "年" + mon + "月" + day + "日"; 
+	return s;
+}
+</script>
+</div>
