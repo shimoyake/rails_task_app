@@ -34,8 +34,8 @@
 
 <div class="link">
   <ul>
-    <li><%= link_to 'スケジュールを編集', edit_task_path %></li>
-    <li><%= link_to '削除', task_path, method: :delete, data: { confirm: "本当に削除しますか？" } %></li>
+    <li><%= button_to 'スケジュールを編集', edit_task_path %></li>
+    <li><%= button_to '削除', task_path, method: :delete, data: { confirm: "本当に削除しますか？" } %></li>
     <li><%= link_to 'スケジュール一覧に戻る', tasks_path %></li>
   </ul>
 </div>

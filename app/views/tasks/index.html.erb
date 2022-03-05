@@ -1,69 +1,76 @@
-<h1>スケジュール管理アプリ</h1>
-
-<h2>スケジュール一覧</h2>
-
-  <% if flash[:notice] %>
-    <p class="notice"><%= flash[:notice] %></p>
-  <% end %>
-
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>タスク名</th>
-      <th>開始日</th>
-      <th>終了日</th>
-      <th>終日</th>
-      <th>参照</th>
-      <th>編集</th>
-      <th>削除</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.id %></td>
-        <td><%= task.tittle %></td>
-        <td><%= task.bigin %></td>
-        <td><%= task.finish %></td>
-        
-        <!--終日にチェック（＝１）の時にまる-->
-
-        <% if task.allday == 1 %>
-        <td><%= task.allday ="◯"%></td>
-        
-        <% else %>
-        <td><%= task.allday %></td>
-        <% end %>
-        
-        <td><%= link_to "参照", task %></td>
-        <td><%= link_to '編集', edit_task_path(task) %></td>
-        <td><%= link_to '削除', task_path(task), method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<div class="link">
-<%= link_to 'スケジュール新規登録', new_task_path %>
+<div class="main_tittle">
+  <h1>To Do List</h1>
 </div>
 
-<!--現在の日にち-->
+  <!--現在の日にち-->
 <div class="date">
-<span id="view_time"></span>
-
-<script type="text/javascript">
-document.getElementById("view_time").innerHTML = getNow();
-
-function getNow() {
-	var now = new Date();
-	var year = now.getFullYear();
-	var mon = now.getMonth()+1; //１を足すこと
-	var day = now.getDate();
-
-	//出力用
-	var s = year + "年" + mon + "月" + day + "日"; 
-	return s;
-}
-</script>
+  <span id="view_time"></span>
+  
+  <script type="text/javascript">
+  document.getElementById("view_time").innerHTML = getNow();
+  
+  function getNow() {
+  	var now = new Date();
+  	var year = now.getFullYear();
+  	var mon = now.getMonth()+1; //１を足すこと
+  	var day = now.getDate();
+  
+  	//出力用
+  	var s = year + "年" + mon + "月" + day + "日"; 
+  	return s;
+  }
+  </script>
+</div>
+  
+<div class="settion">
+    <a href="https://4e6d311e267643cd814fbfd5c58e1a0b.vfs.cloud9.us-east-2.amazonaws.com/tasks/new" class="btn btn-svg">
+    <svg>
+      <rect x="2" y="2" rx="0" fill="none" width=200 height="50"></rect>
+    </svg>
+    <span>make new！</span>
+    </a>
+    
+  
+    <% if flash[:notice] %>
+      <p class="notice"><%= flash[:notice] %></p>
+    <% end %>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>タスク名</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>終日</th>
+        <th>参照</th>
+        <th>編集</th>
+        <th>削除</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tasks.each do |task| %>
+        <tr>
+          <td><%= task.id %></td>
+          <td><%= task.tittle %></td>
+          <td><%= task.bigin %></td>
+          <td><%= task.finish %></td>
+          
+          <!--終日にチェック（＝１）の時にまる-->
+  
+          <% if task.allday == 1 %>
+          <td><%= task.allday ="◯"%></td>
+          
+          <% else %>
+          <td><%= task.allday %></td>
+          <% end %>
+          
+          <td><%= link_to "参照", task %></td>
+          <td><%= link_to '編集', edit_task_path(task) %></td>
+          <td><%= button_to '削除', task_path(task), method: :delete, data: { confirm: "本当に削除しますか？" } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
