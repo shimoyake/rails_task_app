@@ -8,10 +8,8 @@ body {
   padding: 0;
   background-color: #79c6b6;
 }
-
-h1{
-  font-size:30px;
-  padding:20px;
+.settion{
+  margin-left: 30px;
 }
 
 li{
@@ -159,7 +157,14 @@ a.btn-svg span {
 
 .main_tittle{
   background: rgba(245, 245, 245, 0.97);
-  padding-left: 20px;
+  padding: 20px;
+  
+  a{
+  font-size: 30px;
+  margin: 20px;
+  text-decoration: none;
+  color: #000000;
+}
 }
 
 html,
