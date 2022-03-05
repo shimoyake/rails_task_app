@@ -18,7 +18,11 @@
    
    <tr>
     <th>終日</th>
-    <td><%= @task.allday %></td>
+    <% if @task.bigin == @task.finish %>
+        <td><%= "◯"%></td>
+        <% else %>
+        <td><%=  %></td>
+    <% end %>
    </tr>
    
    <tr>
@@ -30,7 +34,9 @@
 
 <div class="link">
   <ul>
-    <li><%= link_to '戻る', tasks_path %></li>
+    <li><%= link_to 'スケジュールを編集', edit_task_path %></li>
+    <li><%= link_to '削除', task_path, method: :delete, data: { confirm: "本当に削除しますか？" } %></li>
+    <li><%= link_to 'スケジュール一覧に戻る', tasks_path %></li>
   </ul>
 </div>
 

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tittle: MyString
+  bigin: 2021-10-07
+  finish: 2021-10-07
+  allday: 1
+  memo: MyText
+
+two:
+  tittle: MyString
+  bigin: 2021-10-07
+  finish: 2021-10-07
+  allday: 1
+  memo: MyText
