@@ -1,0 +1,172 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #79c6b6;
+}
+
+h1{
+  font-size:30px;
+  padding:20px;
+}
+
+li{
+  list-style:none;
+  padding:10px;
+}
+ 
+.notice {
+    background-color: #ccf;
+    padding: 5px;
+}
+
+.date{
+  font-size:30px;
+  padding:20px;
+}
+
+.link{
+  padding:10px;
+}
+
+table {
+  border: 1px solid #aaa;
+  border-collapse: separate;
+  overflow: hidden;
+  border-spacing: 0;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #aaa;
+  margin-top: 30px;
+
+  th, td {
+    padding: .6em 3em;
+    vertical-align: middle;
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  tr {
+    &:last-child {
+      th, td {
+        border-bottom: none;
+      }
+    }
+  }
+
+  th {
+    background-color: #F6A38B;
+  }
+
+  td {
+    background: #fff;
+  }
+}
+
+/*新規登録ボタン*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html .btn {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  padding: 30px;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  font-size: 80%;
+}
+
+a.btn-svg {
+  font-weight: 700;
+  line-height: 54px;
+
+  width: 204px;
+  height: 54px;
+  padding: 0;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  background-color: transparent;
+}
+
+a.btn-svg svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+a.btn-svg svg rect {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+
+  stroke: #000;
+  stroke-width: 2;
+  stroke-dasharray: 200px, 16px;
+  stroke-dashoffset: 70px;
+}
+
+a.btn-svg:hover svg rect {
+  stroke-dashoffset: 284px;
+}
+
+a.btn-svg span {
+  color: #000;
+}
+
+/*トップ部分*/
+
+.main_tittle{
+  background: rgba(245, 245, 245, 0.97);
+  padding-left: 20px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
