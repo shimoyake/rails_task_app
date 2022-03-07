@@ -5,7 +5,7 @@
 <%= render 'shared/app' %>
   
 <div class="settion">
-    <a href="https://4e6d311e267643cd814fbfd5c58e1a0b.vfs.cloud9.us-east-2.amazonaws.com/tasks/new" class="btn btn-svg">
+    <a href="https://7f12e8764bea49be9dfbf168e711c013.vfs.cloud9.ap-northeast-1.amazonaws.com/tasks/new" class="btn btn-svg">
     <svg>
       <rect x="2" y="2" rx="0" fill="none" width=200 height="50"></rect>
     </svg>
@@ -20,7 +20,6 @@
   <table>
     <thead>
       <tr>
-        <th>ID</th>
         <th>タスク名</th>
         <th>開始日</th>
         <th>終了日</th>
@@ -33,7 +32,6 @@
     <tbody>
       <% @tasks.each do |task| %>
         <tr>
-          <td><%= task.id %></td>
           <td><%= task.tittle %></td>
           <td><%= task.bigin %></td>
           <td><%= task.finish %></td>
